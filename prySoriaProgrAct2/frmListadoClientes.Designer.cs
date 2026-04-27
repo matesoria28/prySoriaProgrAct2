@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.gbListadoClientes = new System.Windows.Forms.GroupBox();
-            this.dgvClientes = new System.Windows.Forms.DataGridView();
-            this.lblTotal = new System.Windows.Forms.Label();
-            this.lblCantidad = new System.Windows.Forms.Label();
-            this.lblPromedio = new System.Windows.Forms.Label();
-            this.lblTotal2 = new System.Windows.Forms.Label();
-            this.lblCantidad2 = new System.Windows.Forms.Label();
             this.lblPromedio2 = new System.Windows.Forms.Label();
+            this.lblCantidad2 = new System.Windows.Forms.Label();
+            this.lblTotal2 = new System.Windows.Forms.Label();
+            this.lblPromedio = new System.Windows.Forms.Label();
+            this.lblCantidad = new System.Windows.Forms.Label();
+            this.lblTotal = new System.Windows.Forms.Label();
+            this.dgvClientes = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,6 +60,59 @@
             this.gbListadoClientes.TabStop = false;
             this.gbListadoClientes.Text = "Consulta de Datos";
             // 
+            // lblPromedio2
+            // 
+            this.lblPromedio2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblPromedio2.Location = new System.Drawing.Point(302, 367);
+            this.lblPromedio2.Name = "lblPromedio2";
+            this.lblPromedio2.Size = new System.Drawing.Size(100, 23);
+            this.lblPromedio2.TabIndex = 6;
+            // 
+            // lblCantidad2
+            // 
+            this.lblCantidad2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblCantidad2.Location = new System.Drawing.Point(302, 331);
+            this.lblCantidad2.Name = "lblCantidad2";
+            this.lblCantidad2.Size = new System.Drawing.Size(100, 23);
+            this.lblCantidad2.TabIndex = 5;
+      //      this.lblCantidad2.Click += new System.EventHandler(this.lblCantidad2_Click);
+            // 
+            // lblTotal2
+            // 
+            this.lblTotal2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblTotal2.Location = new System.Drawing.Point(302, 293);
+            this.lblTotal2.Name = "lblTotal2";
+            this.lblTotal2.Size = new System.Drawing.Size(100, 23);
+            this.lblTotal2.TabIndex = 4;
+//            this.lblTotal2.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // lblPromedio
+            // 
+            this.lblPromedio.AutoSize = true;
+            this.lblPromedio.Location = new System.Drawing.Point(178, 377);
+            this.lblPromedio.Name = "lblPromedio";
+            this.lblPromedio.Size = new System.Drawing.Size(104, 13);
+            this.lblPromedio.TabIndex = 3;
+            this.lblPromedio.Text = "Promedio de Deuda:";
+            // 
+            // lblCantidad
+            // 
+            this.lblCantidad.AutoSize = true;
+            this.lblCantidad.Location = new System.Drawing.Point(178, 341);
+            this.lblCantidad.Name = "lblCantidad";
+            this.lblCantidad.Size = new System.Drawing.Size(107, 13);
+            this.lblCantidad.TabIndex = 2;
+            this.lblCantidad.Text = "Cantidad de Clientes:";
+            // 
+            // lblTotal
+            // 
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Location = new System.Drawing.Point(181, 303);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(84, 13);
+            this.lblTotal.TabIndex = 1;
+            this.lblTotal.Text = "Total de Deuda:";
+            // 
             // dgvClientes
             // 
             this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -72,58 +125,6 @@
             this.dgvClientes.Name = "dgvClientes";
             this.dgvClientes.Size = new System.Drawing.Size(440, 232);
             this.dgvClientes.TabIndex = 0;
-            // 
-            // lblTotal
-            // 
-            this.lblTotal.AutoSize = true;
-            this.lblTotal.Location = new System.Drawing.Point(181, 303);
-            this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(84, 13);
-            this.lblTotal.TabIndex = 1;
-            this.lblTotal.Text = "Total de Deuda:";
-            // 
-            // lblCantidad
-            // 
-            this.lblCantidad.AutoSize = true;
-            this.lblCantidad.Location = new System.Drawing.Point(178, 341);
-            this.lblCantidad.Name = "lblCantidad";
-            this.lblCantidad.Size = new System.Drawing.Size(107, 13);
-            this.lblCantidad.TabIndex = 2;
-            this.lblCantidad.Text = "Cantidad de Clientes:";
-            // 
-            // lblPromedio
-            // 
-            this.lblPromedio.AutoSize = true;
-            this.lblPromedio.Location = new System.Drawing.Point(178, 377);
-            this.lblPromedio.Name = "lblPromedio";
-            this.lblPromedio.Size = new System.Drawing.Size(104, 13);
-            this.lblPromedio.TabIndex = 3;
-            this.lblPromedio.Text = "Promedio de Deuda:";
-            // 
-            // lblTotal2
-            // 
-            this.lblTotal2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblTotal2.Location = new System.Drawing.Point(302, 293);
-            this.lblTotal2.Name = "lblTotal2";
-            this.lblTotal2.Size = new System.Drawing.Size(100, 23);
-            this.lblTotal2.TabIndex = 4;
-            this.lblTotal2.Click += new System.EventHandler(this.label4_Click);
-            // 
-            // lblCantidad2
-            // 
-            this.lblCantidad2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblCantidad2.Location = new System.Drawing.Point(302, 331);
-            this.lblCantidad2.Name = "lblCantidad2";
-            this.lblCantidad2.Size = new System.Drawing.Size(100, 23);
-            this.lblCantidad2.TabIndex = 5;
-            // 
-            // lblPromedio2
-            // 
-            this.lblPromedio2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblPromedio2.Location = new System.Drawing.Point(302, 367);
-            this.lblPromedio2.Name = "lblPromedio2";
-            this.lblPromedio2.Size = new System.Drawing.Size(100, 23);
-            this.lblPromedio2.TabIndex = 6;
             // 
             // Column1
             // 

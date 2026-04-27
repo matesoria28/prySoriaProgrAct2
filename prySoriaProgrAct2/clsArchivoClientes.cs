@@ -50,8 +50,70 @@ namespace prySoriaProgrAct2
             AD.Close();
             AD.Dispose();
         }
+        public Int32 CantidadClientes()
+        {
+            string DatosLeidos;
+            Int32 C = 0;
+            //Abrir
+            StreamReader AD=new StreamReader(NombreArchivo);
+            //Leer
+            DatosLeidos = AD.ReadLine();
+            while (DatosLeidos != null)
+            {
+                C++;
+                DatosLeidos = AD.ReadLine();
+            }
+            //Cerrar
+            AD.Close();
+            AD.Dispose();
+            return C;
+        }
+
+        public Decimal DeudaClientes()
+        {
+            string DatosLeidos;
+            string[] vecDatos = new string[4];
+            Decimal Total = 0;
+            //Abrir
+            StreamReader AD = new StreamReader(NombreArchivo);
+            //Leer
+            DatosLeidos = AD.ReadLine();
+            while (DatosLeidos != null)
+            {
+                vecDatos = DatosLeidos.Split(';');
+                Total=Total +Convert.ToDecimal(vecDatos[2]);
+                DatosLeidos = AD.ReadLine();
+            }
+            //Cerrar
+            AD.Close();
+            AD.Dispose();
+            return Total;
+        }
+
+        public Decimal PromedioDeuda()
+        {
+            string DatosLeidos;
+            string[] vecDatos = new string[4];
+            Decimal Total = 0;
+            Int32 C = 0;
+            //Abrir
+            StreamReader AD = new StreamReader(NombreArchivo);
+            //Leer
+            DatosLeidos = AD.ReadLine();
+            while (DatosLeidos != null)
+            {
+                C++;
+                vecDatos = DatosLeidos.Split(';');
+                Total = Total + Convert.ToDecimal(vecDatos[2]);
+                DatosLeidos = AD.ReadLine();
+            }
+            //Cerrar
+            AD.Close();
+            AD.Dispose();
+            return Total/C;
+        }
 
 
-    
+
     }
 }

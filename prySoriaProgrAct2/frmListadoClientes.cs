@@ -17,14 +17,17 @@ namespace prySoriaProgrAct2
             InitializeComponent();
         }
         clsArchivoClientes x = new clsArchivoClientes();
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void frmListadoClientes_Load(object sender, EventArgs e)
         {
             x.Listar(dgvClientes);
+            lblCantidad2.Text=x.CantidadClientes().ToString();
+            lblTotal2.Text=x.DeudaClientes().ToString();
+            lblPromedio2.Text=x.PromedioDeuda().ToString();
+
         }
+
+      
     }
 }
