@@ -113,7 +113,34 @@ namespace prySoriaProgrAct2
             return Total/C;
         }
 
+        public void ListarDeudores(DataGridView Grilla)
+        {
+            string DatosLeidos;
+            string[] vecDatos = new string[4];
 
+            //Abrir
+            StreamReader AD = new StreamReader(NombreArchivo);
+            //leer
+            DatosLeidos = AD.ReadLine();
+            Grilla.Rows.Clear();
+            while (DatosLeidos != null)
+            {
+                vecDatos = DatosLeidos.Split(';');
+
+                if (Convert.ToDecimal(vecDatos[2]) > 0)
+                {
+
+                    Grilla.Rows.Add(vecDatos[0], vecDatos[1], vecDatos[2], vecDatos[3]);
+                }
+                    
+                DatosLeidos = AD.ReadLine();
+            }
+            //Cerrar
+            AD.Close();
+            AD.Dispose();
+        }
+
+       
 
     }
 }

@@ -30,5 +30,16 @@ namespace prySoriaProgrAct2
             //Formulario.MdiParent = this;//opcional
             Formulario.Show();
         }
+
+        private void frmPrincipal_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listadoDeClientesDeudoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form formulario=new frmClientesDeudores();
+            formulario.Show();
+        }
     }
 }
