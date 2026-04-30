@@ -40,12 +40,14 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnReporte = new System.Windows.Forms.Button();
             this.gbListadoClientes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
             this.SuspendLayout();
             // 
             // gbListadoClientes
             // 
+            this.gbListadoClientes.Controls.Add(this.btnReporte);
             this.gbListadoClientes.Controls.Add(this.lblPromedio2);
             this.gbListadoClientes.Controls.Add(this.lblCantidad2);
             this.gbListadoClientes.Controls.Add(this.lblTotal2);
@@ -55,7 +57,7 @@
             this.gbListadoClientes.Controls.Add(this.dgvClientes);
             this.gbListadoClientes.Location = new System.Drawing.Point(12, 12);
             this.gbListadoClientes.Name = "gbListadoClientes";
-            this.gbListadoClientes.Size = new System.Drawing.Size(452, 426);
+            this.gbListadoClientes.Size = new System.Drawing.Size(452, 416);
             this.gbListadoClientes.TabIndex = 0;
             this.gbListadoClientes.TabStop = false;
             this.gbListadoClientes.Text = "Consulta de Datos";
@@ -75,7 +77,6 @@
             this.lblCantidad2.Name = "lblCantidad2";
             this.lblCantidad2.Size = new System.Drawing.Size(100, 23);
             this.lblCantidad2.TabIndex = 5;
-      //      this.lblCantidad2.Click += new System.EventHandler(this.lblCantidad2_Click);
             // 
             // lblTotal2
             // 
@@ -84,7 +85,6 @@
             this.lblTotal2.Name = "lblTotal2";
             this.lblTotal2.Size = new System.Drawing.Size(100, 23);
             this.lblTotal2.TabIndex = 4;
-//            this.lblTotal2.Click += new System.EventHandler(this.label4_Click);
             // 
             // lblPromedio
             // 
@@ -146,11 +146,21 @@
             this.Column4.HeaderText = "Deuda";
             this.Column4.Name = "Column4";
             // 
+            // btnReporte
+            // 
+            this.btnReporte.Location = new System.Drawing.Point(18, 367);
+            this.btnReporte.Name = "btnReporte";
+            this.btnReporte.Size = new System.Drawing.Size(109, 29);
+            this.btnReporte.TabIndex = 7;
+            this.btnReporte.Text = "Generar Reporte";
+            this.btnReporte.UseVisualStyleBackColor = true;
+            this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
+            // 
             // frmListadoClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(476, 450);
+            this.ClientSize = new System.Drawing.Size(476, 437);
             this.Controls.Add(this.gbListadoClientes);
             this.Name = "frmListadoClientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -177,5 +187,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.Button btnReporte;
     }
 }

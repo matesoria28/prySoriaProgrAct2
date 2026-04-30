@@ -28,6 +28,10 @@ namespace prySoriaProgrAct2
 
         }
 
-      
+        private void btnReporte_Click(object sender, EventArgs e)
+        {
+            x.GenerarReporte();
+            MessageBox.Show("Reporte generado con exito");
+        }
     }
 }

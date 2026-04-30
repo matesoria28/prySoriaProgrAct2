@@ -140,7 +140,58 @@ namespace prySoriaProgrAct2
             AD.Dispose();
         }
 
-       
+        public void GenerarReporte()
+        {
+           Int32 Cantidad = 0;
+           Decimal total = 0;
+            string DatosLeidos;
+            string[] vecDatos = new string[4];
+            StreamWriter Reporte = new StreamWriter("Reporte.csv",false,Encoding.UTF8);
+
+            Reporte.WriteLine("Listado de Clientes");
+            Reporte.WriteLine("");
+            Reporte.WriteLine("Código;Nombre;Deuda;Límite");
+
+
+            //Abrir
+            StreamReader AD = new StreamReader(NombreArchivo);
+            //leer
+            DatosLeidos = AD.ReadLine();
+
+            while (DatosLeidos != null)
+            {
+                vecDatos = DatosLeidos.Split(';');
+
+                Reporte.Write(vecDatos[0]);
+                Reporte.Write(";");
+                Reporte.Write(vecDatos[1]);
+                Reporte.Write(";");
+                Reporte.Write(vecDatos[2]);
+                Reporte.Write(";");
+                Reporte.WriteLine(vecDatos[3]);
+
+                DatosLeidos = AD.ReadLine();
+                Cantidad++; //contador
+                total = total + Convert.ToDecimal(vecDatos[2]);//Acumulador
+            }
+
+            //Cerrar
+            AD.Close();
+            AD.Dispose();
+
+            Reporte.WriteLine(""); ;
+            Reporte.Write("Total de Deuda:;;");
+            Reporte.WriteLine(total);
+
+            Reporte.Write("Cantidad de Clientes:;;");
+            Reporte.WriteLine(Cantidad);
+
+            Reporte.Write("Promedio de Deuda:;;");
+            Reporte.WriteLine(total/Cantidad);
+
+            Reporte.Close();
+            Reporte.Dispose();
+        }
 
     }
 }
