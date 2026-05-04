@@ -33,5 +33,12 @@ namespace prySoriaProgrAct2
             x.GenerarReporte();
             MessageBox.Show("Reporte generado con exito");
         }
+
+        private void btnOrdenar_Click(object sender, EventArgs e)
+        {
+            x.OrdenarArchivo();
+            MessageBox.Show("Archivo ordenado con exito");  
+            x.Listar(dgvClientes);
+        }
     }
 }

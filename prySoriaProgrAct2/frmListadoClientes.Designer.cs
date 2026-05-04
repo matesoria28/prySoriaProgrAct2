@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.gbListadoClientes = new System.Windows.Forms.GroupBox();
+            this.btnReporte = new System.Windows.Forms.Button();
             this.lblPromedio2 = new System.Windows.Forms.Label();
             this.lblCantidad2 = new System.Windows.Forms.Label();
             this.lblTotal2 = new System.Windows.Forms.Label();
@@ -40,13 +41,14 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnReporte = new System.Windows.Forms.Button();
+            this.btnOrdenar = new System.Windows.Forms.Button();
             this.gbListadoClientes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
             this.SuspendLayout();
             // 
             // gbListadoClientes
             // 
+            this.gbListadoClientes.Controls.Add(this.btnOrdenar);
             this.gbListadoClientes.Controls.Add(this.btnReporte);
             this.gbListadoClientes.Controls.Add(this.lblPromedio2);
             this.gbListadoClientes.Controls.Add(this.lblCantidad2);
@@ -61,6 +63,16 @@
             this.gbListadoClientes.TabIndex = 0;
             this.gbListadoClientes.TabStop = false;
             this.gbListadoClientes.Text = "Consulta de Datos";
+            // 
+            // btnReporte
+            // 
+            this.btnReporte.Location = new System.Drawing.Point(18, 367);
+            this.btnReporte.Name = "btnReporte";
+            this.btnReporte.Size = new System.Drawing.Size(109, 29);
+            this.btnReporte.TabIndex = 7;
+            this.btnReporte.Text = "Generar Reporte";
+            this.btnReporte.UseVisualStyleBackColor = true;
+            this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
             // 
             // lblPromedio2
             // 
@@ -146,15 +158,15 @@
             this.Column4.HeaderText = "Deuda";
             this.Column4.Name = "Column4";
             // 
-            // btnReporte
+            // btnOrdenar
             // 
-            this.btnReporte.Location = new System.Drawing.Point(18, 367);
-            this.btnReporte.Name = "btnReporte";
-            this.btnReporte.Size = new System.Drawing.Size(109, 29);
-            this.btnReporte.TabIndex = 7;
-            this.btnReporte.Text = "Generar Reporte";
-            this.btnReporte.UseVisualStyleBackColor = true;
-            this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
+            this.btnOrdenar.Location = new System.Drawing.Point(18, 327);
+            this.btnOrdenar.Name = "btnOrdenar";
+            this.btnOrdenar.Size = new System.Drawing.Size(109, 23);
+            this.btnOrdenar.TabIndex = 8;
+            this.btnOrdenar.Text = "Ordenar";
+            this.btnOrdenar.UseVisualStyleBackColor = true;
+            this.btnOrdenar.Click += new System.EventHandler(this.btnOrdenar_Click);
             // 
             // frmListadoClientes
             // 
@@ -188,5 +200,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.Button btnReporte;
+        private System.Windows.Forms.Button btnOrdenar;
     }
 }
