@@ -26,5 +26,10 @@ namespace prySoriaProgrAct2
             lblTotal2.Text = x.DeudaClientes().ToString();
             lblPromedio2.Text = x.PromedioDeuda().ToString();
         }
+
+        private void gbListadoClientes_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -55,10 +55,11 @@
             this.gbListadoClientes.Controls.Add(this.dgvClientes);
             this.gbListadoClientes.Location = new System.Drawing.Point(12, 12);
             this.gbListadoClientes.Name = "gbListadoClientes";
-            this.gbListadoClientes.Size = new System.Drawing.Size(452, 426);
+            this.gbListadoClientes.Size = new System.Drawing.Size(454, 426);
             this.gbListadoClientes.TabIndex = 1;
             this.gbListadoClientes.TabStop = false;
             this.gbListadoClientes.Text = "Consulta de Datos";
+            this.gbListadoClientes.Enter += new System.EventHandler(this.gbListadoClientes_Enter);
             // 
             // lblPromedio2
             // 
@@ -121,7 +122,7 @@
             this.Column4});
             this.dgvClientes.Location = new System.Drawing.Point(0, 19);
             this.dgvClientes.Name = "dgvClientes";
-            this.dgvClientes.Size = new System.Drawing.Size(440, 232);
+            this.dgvClientes.Size = new System.Drawing.Size(446, 232);
             this.dgvClientes.TabIndex = 0;
             // 
             // Column1
@@ -148,11 +149,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(474, 449);
+            this.ClientSize = new System.Drawing.Size(476, 449);
             this.Controls.Add(this.gbListadoClientes);
             this.Name = "frmClientesDeudores";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmClientesDeudores";
+            this.Text = "Clientes Deudores";
             this.Load += new System.EventHandler(this.frmClientesDeudores_Load);
             this.gbListadoClientes.ResumeLayout(false);
             this.gbListadoClientes.PerformLayout();

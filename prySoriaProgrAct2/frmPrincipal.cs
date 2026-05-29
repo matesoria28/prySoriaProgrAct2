@@ -41,5 +41,17 @@ namespace prySoriaProgrAct2
             Form formulario=new frmClientesDeudores();
             formulario.Show();
         }
+
+        private void listadoDeClientesOrdenadosPorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form formulario = new frmListadoOrdenado();
+            formulario.Show();
+        }
+
+        private void acercaDeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form formulario = new frmAcercaDe();
+            formulario.Show();
+        }
     }
 }

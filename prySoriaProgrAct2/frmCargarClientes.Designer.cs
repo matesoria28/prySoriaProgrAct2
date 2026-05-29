@@ -142,6 +142,7 @@
             this.Name = "frmCargarClientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cargar Clientes";
+            this.Load += new System.EventHandler(this.frmCargarClientes_Load);
             this.gbCargaDatos.ResumeLayout(false);
             this.gbCargaDatos.PerformLayout();
             this.ResumeLayout(false);
